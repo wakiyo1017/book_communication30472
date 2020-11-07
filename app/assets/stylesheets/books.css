@@ -1,0 +1,51 @@
+.wrapper {
+  background-color: antiquewhite;
+  height: 150px;
+  width: 100%;
+  padding: 40px 0 0 40px;
+  font-size: 40px;
+}
+.button-zone {
+  background-color: lightblue;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+  justify-content: center;
+}
+.btn {
+  font-size: 25px;
+  background-color: skyblue;
+  border: 1px solid white;
+  margin: 0 30px;
+  padding: 10px 20px;
+  direction: none;
+}
+
+.impression-field {
+  background-color: antiquewhite;
+  height: calc(100vh - 100px - 150px);
+  padding: 40px 0 0 60px;
+  display: flex;
+}
+.book-data {
+  margin-left: 30px;
+}
+.upper-book-data{
+  font-size: 25px;
+}
+.lower-book-data {
+  display: flex;
+}
+.user-name {
+  padding-top: 5px;
+  font-size: 20px;
+  padding-left: 10px;
+}
+.read-date {
+  font-size: 15px;
+  color: gray;
+  margin-left: 20px;
+  padding-top: 10px;
+}
