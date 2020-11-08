@@ -2,8 +2,13 @@
   <h1>Book Communication</h1>
 </div>
 <div class="button-zone">
-  <%= link_to "ログイン", new_user_session_path, class:"btn" %>
-  <%= link_to "新規登録", new_user_registration_path, class:"btn" %>
+  <% if user_signed_in? %>
+    <%= link_to "自分の部屋に行く", "#", class:"btn" %>
+    <%= link_to "ログアウト", "#", class:"btn" %>
+  <% else %>
+    <%= link_to "ログイン", new_user_session_path, class:"btn" %>
+    <%= link_to "新規登録", new_user_registration_path, class:"btn" %>
+  <% end %>
 </div>
 <div class="main-field">
   <div class="book-photo">
