@@ -1,0 +1,56 @@
+.form-main-field {
+  background-color: antiquewhite;
+  height: calc(100vh - 100px - 150px);
+  width: 100%;
+  padding: 40px 60px;
+  justify-content: center;
+}
+.page-title {
+  font-size: 30px;
+}
+
+.form-style {
+  border: 1px solid lightblue;
+  padding: 20px 50px;
+}
+
+.form-space {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-form-tag {
+  font-size: 20px;
+  width: 100px;
+  height: 30px;
+  margin: auto;
+}
+.user-form-field {
+  margin: 10px auto;
+  background-color: white;
+  width: 70%;
+  height: 30px;
+  border: 1px solid gray;
+}
+
+.btn-area {
+  background-color: antiquewhite;
+  height: 100px;
+  width: 100%px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-2 {
+  font-size: 10px;
+  background-color: lightgray;
+  border: 1px solid white;
+  margin: 0 30px;
+  padding: 10px 20px;
+  direction: none;
+}
+

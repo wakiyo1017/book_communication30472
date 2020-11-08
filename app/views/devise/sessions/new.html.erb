@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <h1>Book Communication</h1>
+</div>
+<div class="button-zone">
+  <div class="page-title">
+  ログイン
+  </div>
+</div>
+<div class="form-main-field">
+  <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
+    <div class="form-style">
+      <div class="form-space">
+        <%= f.label :name, class:"user-form-tag" %>
+        <%= f.text_field :name, class:"user-form-field" %>
+      </div>
+      <div class="form-space">
+        <%= f.label :email, class:"user-form-tag" %>
+        <%= f.text_field :email, class:"user-form-field" %>
+      </div>
+      <div class="form-space">
+        <%= f.label :password, class:"user-form-tag" %>
+        <%= f.text_field :password, class:"user-form-field" %>
+      </div>
+      <div class="btn-area">
+        <%= f.submit "ログイン", class:"btn" %>
+        <%= link_to "戻る", "#", class:"btn-2" %>
+      </div>
+    </div>
+  <% end %>    
+</div>

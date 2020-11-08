@@ -23,7 +23,7 @@
   direction: none;
 }
 
-.impression-field {
+.main-field {
   background-color: antiquewhite;
   height: calc(100vh - 100px - 150px);
   padding: 40px 0 0 60px;
