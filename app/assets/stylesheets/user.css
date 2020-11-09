@@ -4,22 +4,25 @@
   width: 100%;
   padding: 40px 60px;
   justify-content: center;
+  overflow: scroll;
 }
 .page-title {
   font-size: 30px;
 }
 
 .form-style {
+  margin: 40px;
   border: 1px solid lightblue;
   padding: 20px 50px;
 }
 
 .form-space {
-  height: 60px;
+  height: 70px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
 
 .user-form-tag {

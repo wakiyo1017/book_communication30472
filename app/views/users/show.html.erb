@@ -2,27 +2,30 @@
   <h1>Book Communication</h1>
 </div>
 <div class="button-zone">
-  <%= link_to "読んだ本を登録する", "#", class:"btn" %>
+  <%= link_to "読んだ本を登録する", new_book_path, class:"btn" %>
   <%= link_to "トップページに戻る", root_path, class:"btn" %>
 </div>
 <div class="main-field">
-＜そのUSERが読んだ本リスト（新しい順番で並べる）＞
-  <div class="book-photo">
-  image-photo
-  </div>
-  <div class="book-data">
-    <div class="upper-book-data">
-      <div class="book-title">
-      <%= link_to "Book Title", "#" %>
+  <% @books.each do |book| %>
+    <div class="books-status">
+      <div class="book-photo">
+        <%= image_tag book.image.variant(resize: "200x100"), class:"book-image" %>
+      </div>
+      <div class="book-data">
+        <div class="upper-book-data">
+          <div class="book-title">
+            <%= link_to book.title, book_path(book.id) %>
+          </div>
+        </div>
+        <div class="lower-book-data">
+          <div class="user-name">
+            <%= link_to book.user.name, user_path(book.user.id) %>
+          </div>
+          <div class="read-date">
+            <%= book.created_at %>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="lower-book-data">
-      <div class="user-name">
-      <%= link_to "User Name", "#" %>
-      </div>
-      <div class="read-date">
-      2020/12/31
-      </div>
-    </div>
-  </div>
-</div> 
+  <% end %>
+</div>  

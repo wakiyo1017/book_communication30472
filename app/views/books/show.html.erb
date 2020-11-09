@@ -2,14 +2,38 @@
   <h1>Book Communication</h1>
 </div>
 <div class="button-zone">
-  <%= link_to "戻る", "#", class:"btn-2" %>
+  <%= link_to "トップページへ戻る", root_path, class:"btn-2" %>
 </div>
 <div class="main-field">
-  本のタイトル
-  本の画像
-  読んだ感想
-  コメント入力欄
-  コメントが表示される場所
+  <div class="book-show-status">
+    <div class="book-show-title">
+      <p class="show-title">
+      <%= @book.title %>
+      </p>
+    </div>
+    <div class="book-show-image">
+      <div class="show-image">
+      <%= image_tag @book.image.variant(resize: "400x200") %>
+      </div>
+    </div>
+    <div class="book-show-author">
+      <p class="show-author">
+      <%= @book.author %>
+      </p>
+    </div>
+    <div class="book-show-impression">
+      <%= @book.impression %>
+    </div>
+  </div>
+  <div class="comment-area">
+    <div class="form">
+      <div class="book-show-comment-form">
+        <input class="form-comment" placeholder= "コメント入力欄">
+      </div>
+      <input class="form-submit" type="submit" value="送信">
+    </div>
+    <div class="book-show-comment-area">
+    コメントが表示される場所
+    </div>
+  </div>
 </div>  
-
-＜読んだ本の詳細ページ＞

@@ -3,30 +3,34 @@
 </div>
 <div class="button-zone">
   <% if user_signed_in? %>
-    <%= link_to "自分の部屋に行く", "#", class:"btn" %>
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete class:"btn" %>
+    <%= link_to "自分の部屋に行く", user_path(current_user.id), class:"btn" %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"btn" %>
   <% else %>
     <%= link_to "ログイン", new_user_session_path, class:"btn" %>
     <%= link_to "新規登録", new_user_registration_path, class:"btn" %>
   <% end %>
 </div>
 <div class="main-field">
-  <div class="book-photo">
-  image-photo
-  </div>
-  <div class="book-data">
-    <div class="upper-book-data">
-      <div class="book-title">
-      <%= link_to "Book Title", "#" %>
+  <% @books.each do |book| %>
+    <div class="books-status">
+      <div class="book-photo">
+        <%= image_tag book.image.variant(resize: "200x100"), class:"book-image" %>
+      </div>
+      <div class="book-data">
+        <div class="upper-book-data">
+          <div class="book-title">
+            <%= link_to book.title, book_path(book.id) %>
+          </div>
+        </div>
+        <div class="lower-book-data">
+          <div class="user-name">
+            <%= link_to book.user.name, user_path(book.user.id) %>
+          </div>
+          <div class="read-date">
+            <%= book.created_at %>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="lower-book-data">
-      <div class="user-name">
-      <%= link_to "User Name", "#" %>
-      </div>
-      <div class="read-date">
-      2020/12/31
-      </div>
-    </div>
-  </div>
+  <% end %>
 </div>  

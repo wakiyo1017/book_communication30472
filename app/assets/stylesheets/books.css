@@ -6,6 +6,7 @@
   font-size: 40px;
 }
 .button-zone {
+  font-size: 30px;
   background-color: lightblue;
   height: 100px;
   width: 100%;
@@ -24,10 +25,19 @@
 }
 
 .main-field {
+  width: 100%;
   background-color: antiquewhite;
   height: calc(100vh - 100px - 150px);
   padding: 40px 0 0 60px;
+  justify-content: center;
+  overflow: scroll;
+}
+.books-status {
+  margin: 15px 30px;
+  border: 1px solid skyblue;
+  padding: 10px;
   display: flex;
+  justify-content: center;
 }
 .book-data {
   margin-left: 30px;
@@ -52,16 +62,108 @@
 
 .img-upload {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   padding: 2vh 0;
+  margin: 15px;
 }
 
 .click-upload {
-  margin: 15px 0;
+  margin: 15px auto;
   min-width: 250px;
+
 }
 
 .click-upload>p {
   margin-bottom: 15px;
+}
+
+.impression-form-field {
+  height: 90px;
+  width: 70%;
+}
+
+.main-field {
+  background-color: antiquewhite;
+  height: calc(100vh - 100px - 150px);
+  width: 100%;
+  padding: 40px 60px;
+  justify-content: center;
+}
+
+.book-photo {
+  height: 100px;
+  width: 200px;
+}
+
+/* 本の詳細ページ */
+.book-show-status{
+  border: 1px solid skyblue;
+  margin: 20px 30px;
+  padding: 30px;
+  justify-content: center;  
+}
+.book-show-title {
+  height: 40px;
+  width: 300px;
+  margin: 10px auto;
+  font-size: 30px;
+}
+.show-title {
+  display: flex;
+  justify-content: center;
+}
+.book-show-image {
+  height: 200px;
+  width: 400px;
+  margin: 10px auto;
+}
+.show-image {
+  display: flex;
+  justify-content: center;
+}
+.book-show-author {
+  height: 30px;
+  width: 100px;
+  margin: 10px auto;
+}
+.show-author {
+  display: flex;
+  justify-content: center;
+}
+.book-show-impression {
+  height: 100px;
+  width: 250px;
+  margin: 10px auto;
+}
+
+.comment-area {
+  background-color: tomato;
+  padding: 20px 40px;
+}
+
+.form {
+  width: 100%;
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+.form-input {
+  background-color: white;
+  width: 100%;
+}
+.form-comment {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+.form-submit {
+  background-color: skyblue;
+  border: none;
+  color: white;
+  font-size: 10px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
 }
