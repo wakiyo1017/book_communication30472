@@ -27,13 +27,23 @@
   </div>
   <div class="comment-area">
     <div class="form">
-      <div class="book-show-comment-form">
-        <input class="form-comment" placeholder= "コメント入力欄">
-      </div>
-      <input class="form-submit" type="submit" value="送信">
+      <%= form_with(model: [@book, @comment], local: true) do |f| %>
+        <div class="book-show-comment-form">
+          <%= f.text_field :text, class:"form-comment", placeholder: "コメント入力欄"%>
+          <%= f.submit "送信", class:"form-submit" %>
+        </div>
+      <% end %>
     </div>
     <div class="book-show-comment-area">
     コメントが表示される場所
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.name, user_path(comment.user_id) %>:</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
     </div>
   </div>
 </div>  

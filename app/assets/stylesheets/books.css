@@ -167,3 +167,6 @@
   margin-left: 15px;
   padding: 0 20px;
 }
+.book-show-comment-form {
+  display: flex;
+}
