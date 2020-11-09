@@ -24,12 +24,12 @@ Book Communication
 
 ## データベース設計
 ## booksモデル
-| Column | Type       | Options            |
-| ------ | ---------- | ------------------ |
-| title  | string     | null: false        |
-| author | string     | null: false        |
-| text   | text       | null: false        |
-| user   | references | foreign_key: true  |
+| Column     | Type       | Options            |
+| ---------- | ---------- | ------------------ |
+| title      | string     | null: false        |
+| author     | string     | null: false        |
+| impression | text       | null: false        |
+| user       | references | foreign_key: true  |
 
 ### Association
 has_many :comments

@@ -1,0 +1,42 @@
+<div class="wrapper">
+  <h1>Book Communication</h1>
+</div>
+<div class="button-zone">
+  本の感想を登録する
+</div>
+<div class="main-field">
+  <%= form_with model: @book, local: true do |f| %>
+    <div class="form-style">
+      <div class="form-space">
+      <%# 本のタイトル %>
+        <%= f.label :name, class:"user-form-tag" %>
+        <%= f.text_field :name, class:"user-form-field" %>
+      </div>
+      
+      <%# 本の画像 %>
+      <div class="img-upload">
+        <div class="weight-bold-text">
+        出品画像
+        <%# <span class="indispensable">必須</span> %>
+        </div>
+        <div id="image-list"></div>
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+      </div>
+
+      <%# 読んだ感想 %>
+      <div class="form-space">
+        <%= f.label :impression, class:"user-form-tag" %>
+        <%= f.text_field :impression, class:"user-form-field" %>
+      </div>
+      <div class="btn-area">
+        <%= f.submit "登録する", class:"btn" %>
+        <%= link_to "戻る", "#", class:"btn-2" %>
+      </div>
+    </div>
+  <% end %>
+</div>
