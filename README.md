@@ -9,6 +9,7 @@ Book Communication
 ## URL
 
 ## テスト用アカウント
+  
 
 ## 利用方法
 自分が読んだ本の感想や写真を保存しておく、読書感想文の本棚的なものとして。
@@ -18,8 +19,9 @@ Book Communication
 読書が好きな子供と読書が好きでは無い親が、本をきっかけとしてコミュニケーションが取れる要素にしたい。
 
 ## 洗い出した要件
-
+https://docs.google.com/spreadsheets/d/1QNqEMtP_gxc4itBlkSxD0Petkh9GIGX_eke-WWHlqD8/edit#gid=282075926
 ## 実装した機能についての説明
+マイページ・マイページでの投稿一覧表示・book詳細ページ・book詳細ページでのコメント投稿機能
 ## 実装予定の機能
 
 ## データベース設計
@@ -57,27 +59,5 @@ has_many :comments
 belongs_to :user
 belongs_to :books
 
+## 開発環境
 
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
