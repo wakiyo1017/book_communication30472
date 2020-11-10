@@ -2,7 +2,7 @@
   <h1>Book Communication</h1>
 </div>
 <div class="button-zone">
-  <%= link_to "トップページへ戻る", root_path, class:"btn-2" %>
+  <%= link_to "トップページへ戻る", root_path, class:"btn" %>
 </div>
 <div class="main-field">
   <div class="book-show-status">
@@ -26,16 +26,18 @@
     </div>
   </div>
   <div class="comment-area">
-    <div class="form">
-      <%= form_with(model: [@book, @comment], local: true) do |f| %>
-        <div class="book-show-comment-form">
-          <%= f.text_field :text, class:"form-comment", placeholder: "コメント入力欄"%>
-          <%= f.submit "送信", class:"form-submit" %>
-        </div>
-      <% end %>
-    </div>
+    <% if user_signed_in? && current_user.id != @book.user_id  %>
+      <div class="form">
+        <%= form_with(model: [@book, @comment], local: true) do |f| %>
+          <div class="book-show-comment-form">
+            <%= f.text_field :text, class:"form-comment", placeholder: "コメント入力欄"%>
+            <%= f.submit "送信", class:"form-submit" %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
     <div class="book-show-comment-area">
-    コメントが表示される場所
+    ＜コメント一覧＞
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p>

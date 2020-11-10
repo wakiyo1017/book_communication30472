@@ -7,15 +7,15 @@
 <div class="main-field">
   <%= form_with model: @book, local: true do |f| %>
     <div class="form-style">
-      <div class="form-space">
+      <div class="book-form-space">
       <%# 本のタイトル %>
-        <%= f.label :title, class:"user-form-tag" %>
-        <%= f.text_field :title, class:"user-form-field" %>
+        <%= f.label :title, class:"book-form-tag" %>
+        <%= f.text_field :title, class:"book-form-field" %>
       </div>
       
       <%# 本の画像 %>
       <div class="img-upload">
-        <%= f.label :image, class:"user-form-tag" %>
+        <%= f.label :image, class:"book-form-tag" %>
         <div class="click-upload">
           <p>
             クリックしてファイルをアップロード
@@ -25,14 +25,14 @@
       </div>
 
       <%# 本の作者 %>
-      <div class="form-space">
-        <%= f.label :author, class:"user-form-tag" %>
-        <%= f.text_field :author, class:"user-form-field" %>
+      <div class="book-form-space">
+        <%= f.label :author, class:"book-form-tag" %>
+        <%= f.text_field :author, class:"book-form-field" %>
       </div>
 
       <%# 読んだ感想 %>
-      <div class="form-space">
-        <%= f.label :impression, class:"user-form-tag" %>
+      <div class="book-form-space">
+        <%= f.label :impression, class:"book-form-tag" %>
         <%= f.text_area :impression, class:"impression-form-field" %>
       </div>
 

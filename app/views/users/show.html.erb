@@ -1,8 +1,10 @@
 <div class="wrapper">
-  <h1>Book Communication</h1>
+  <h1><%= @user.name %>さんのお部屋</h1>
 </div>
 <div class="button-zone">
-  <%= link_to "読んだ本を登録する", new_book_path, class:"btn" %>
+  <% if user_signed_in? && current_user.id == @user.id %>
+    <%= link_to "読んだ本を登録する", new_book_path, class:"btn" %>
+  <% end %>
   <%= link_to "トップページに戻る", root_path, class:"btn" %>
 </div>
 <div class="main-field">
