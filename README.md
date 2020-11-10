@@ -1,10 +1,10 @@
 # README
 
 ## アプリケーション名
-Book Communication
+- Book Communication
 
 ## アプリケーション概要
-読んだ本の写真や感想の投稿、それに対してのコメントの投稿
+- 読んだ本の写真や感想の投稿、それに対してのコメントの投稿
 
 ## URL
 
@@ -12,11 +12,11 @@ Book Communication
   
 
 ## 利用方法
-自分が読んだ本の感想や写真を保存しておく、読書感想文の本棚的なものとして。
-その本を読んだ人の感想を見ることができる。
+- 自分が読んだ本の感想や写真を保存しておく、読書感想文の本棚的なものとして。
+- その本を読んだ人の感想を見ることができる。
 
 ## 目指した課題解決
-読書が好きな子供と読書が好きでは無い親が、本をきっかけとしてコミュニケーションが取れる要素にしたい。
+- 読書が好きな子供と読書が好きでは無い親が、本をきっかけとしてコミュニケーションが取れる要素にしたい。
 
 ## 洗い出した要件
 https://docs.google.com/spreadsheets/d/1QNqEMtP_gxc4itBlkSxD0Petkh9GIGX_eke-WWHlqD8/edit#gid=282075926
@@ -34,8 +34,8 @@ https://docs.google.com/spreadsheets/d/1QNqEMtP_gxc4itBlkSxD0Petkh9GIGX_eke-WWHl
 | user       | references | foreign_key: true  |
 
 ### Association
-has_many :comments
-belongs_to :user
+- has_many :comments
+- belongs_to :user
 
 ## usersテーブル
 | Column   | Type   | Options     |
@@ -45,8 +45,8 @@ belongs_to :user
 | password | string | null: false |
 
 ### Association
-has_many :books
-has_many :comments
+- has_many :books
+- has_many :comments
 
 ## commentsテーブル
 | Column | Type       | Options           |
@@ -56,8 +56,8 @@ has_many :comments
 | book   | references | foreign_key: true |
 
 ### Association
-belongs_to :user
-belongs_to :books
+- belongs_to :user
+- belongs_to :books
 
 ## 開発環境
 
