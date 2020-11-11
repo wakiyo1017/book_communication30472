@@ -1,26 +1,37 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+  before do
+    @user = FactoryBot.build(:user)
+  end
   describe "ユーザー新規登録" do
-    it "ユーザーが空だと新規登録できない" do
-      user = User.new(name: "", email: "tttt@gmail.com", password: "00000000", password_confirmation: "00000000")
-      user.valid?
-      expect(user.errors.full_messages).to include("Name can't be blank")
+    context "新規登録がうまくいく時" do
+      it "ユーザー情報が正しく入力されていれば新規登録できる" do
+        expect(@user).to be_valid
+      end
     end
-    it "Eメールが空だと新規登録できない" do
-      user = User.new(name: "abe", email: "", password: "00000000", password_confirmation: "00000000")
-      user.valid?
-      expect(user.errors.full_messages).to include("Email can't be blank")
-    end
-    it "パスワードが空だと新規登録できない" do
-      user = User.new(name: "abe", email: "kkkk@gmeil.com", password: "", password_confirmation: "00000000")
-      user.valid?
-      expect(user.errors.full_messages).to include("Password can't be blank", "Password confirmation doesn't match Password")
-    end
-    it "パスワード確認用が空だと新規登録できない" do
-      user = User.new(name: "abe", email: "kkkk@gmail.com", password: "00000000", password_confirmation: "")
-      user.valid?
-      expect(user.errors.full_messages).to include("Password confirmation doesn't match Password")
+    
+    context "新規登録がうまくいかない時" do
+      it "ユーザーが空だと新規登録できない" do
+        @user.name = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Name can't be blank")
+      end
+      it "Eメールが空だと新規登録できない" do
+        @user.email = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Email can't be blank")
+      end
+      it "パスワードが空だと新規登録できない" do
+        @user.password = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Password can't be blank", "Password confirmation doesn't match Password")
+      end
+      it "パスワード確認用が空だと新規登録できない" do
+        @user.password_confirmation = ""
+        @user.valid?
+        expect(@user.errors.full_messages).to include("Password confirmation doesn't match Password")
+      end
     end
   end
 end
