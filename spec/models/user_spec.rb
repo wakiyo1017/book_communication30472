@@ -10,7 +10,6 @@ RSpec.describe User, type: :model do
         expect(@user).to be_valid
       end
     end
-    
     context "新規登録がうまくいかない時" do
       it "ユーザーが空だと新規登録できない" do
         @user.name = ""
