@@ -100,6 +100,8 @@
 }
 
 .impression-form-field {
+  background-color: white;
+  border: 1px solid gray;
   margin: 10px auto;
   height: 90px;
   width: 70%;
@@ -127,7 +129,7 @@
 }
 .book-show-title {
   height: 40px;
-  width: 300px;
+  width: 100%;
   margin: 10px auto;
   font-size: 30px;
 }
@@ -173,7 +175,8 @@
   width: 100%;
 }
 .form-comment {
-  border: none;
+  background-color: white;
+  border: 1px solid gray;
   height: 50px;
   width: 100%;
   padding-left: 10px;
