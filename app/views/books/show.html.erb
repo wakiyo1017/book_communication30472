@@ -1,5 +1,8 @@
-<div class="wrapper">
-  <h1>Book Communication</h1>
+<div class="top-wrapper">
+  <%= image_tag "top-backimage.png", class:"wrapper" %>
+  <div class="top-title">
+    <h1>Book Communication</h1>
+  </div>
 </div>
 <div class="button-zone">
   <%= link_to "トップページへ戻る", root_path, class:"btn" %>
@@ -24,28 +27,32 @@
     <div class="book-show-impression">
       <%= @book.impression %>
     </div>
-  </div>
-  <div class="comment-area">
-    <% if user_signed_in? && current_user.id != @book.user_id  %>
-      <div class="form">
-        <%= form_with(model: [@book, @comment], local: true) do |f| %>
-          <div class="book-show-comment-form">
-            <%= f.text_field :text, class:"form-comment", placeholder: "コメント入力欄"%>
-            <%= f.submit "送信", class:"form-submit" %>
+    <div class="comment-main">
+      <div class="comment-area">
+        <% if user_signed_in? && current_user.id != @book.user_id  %>
+          <div class="form">
+            <%= form_with(model: [@book, @comment], local: true) do |f| %>
+              <div class="book-show-comment-form">
+                <%= f.text_field :text, class:"form-comment", placeholder: "コメント入力欄"%>
+                <%= f.submit "送信", class:"form-submit" %>
+              </div>
+            <% end %>
           </div>
         <% end %>
+
+        <div class="book-show-comment-area">
+          <div class="comment-list">
+            <% if @comments %>
+              <% @comments.each do |comment| %>
+                <p>
+                  <strong><%= link_to comment.user.name, user_path(comment.user_id) %>:</strong>
+                  <%= comment.text %>
+                </p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
       </div>
-    <% end %>
-    <div class="book-show-comment-area">
-    ＜コメント一覧＞
-      <% if @comments %>
-        <% @comments.each do |comment| %>
-          <p>
-            <strong><%= link_to comment.user.name, user_path(comment.user_id) %>:</strong>
-            <%= comment.text %>
-          </p>
-        <% end %>
-      <% end %>
     </div>
   </div>
 </div>  

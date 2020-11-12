@@ -1,13 +1,27 @@
-.wrapper {
+.top-wrapper {
   background-color: antiquewhite;
   height: 150px;
   width: 100%;
-  padding: 40px 0 0 40px;
-  font-size: 40px;
+  font-size: 50px;
+  position: relative;
+}
+.wrapper {
+  height: 150px;
+  width: 100%;
+  font-size: 50px;
+  position: absolute;
+}
+.top-title {
+  color: antiquewhite;
+  margin: 40px;
+  position: absolute;
+}
+.top-title h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .button-zone {
   font-size: 30px;
-  background-color: lightblue;
+  background-color: lightsalmon;
   height: 100px;
   width: 100%;
   display: flex;
@@ -17,11 +31,12 @@
 }
 .btn {
   font-size: 25px;
-  background-color: skyblue;
+  background-color: orange;
   border: 1px solid white;
   margin: 0 30px;
   padding: 10px 20px;
   direction: none;
+  color: white;
 }
 
 .main-field {
@@ -34,7 +49,7 @@
 }
 .books-status {
   margin: 15px 30px;
-  border: 1px solid skyblue;
+  border: 1px solid orange;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -122,7 +137,7 @@
 
 /* 本の詳細ページ */
 .book-show-status{
-  border: 1px solid skyblue;
+  border: 1px solid orange;
   margin: 20px 30px;
   padding: 30px;
   justify-content: center;  
@@ -160,15 +175,24 @@
   width: 250px;
   margin: 10px auto;
 }
-
+.comment-main {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
 .comment-area {
-  padding: 20px 40px;
+  width: 100%;
+  margin: 10px;
+  padding: 10px 40px 20px 40px;
 }
 
 .form {
   height: 90px;
-  padding: 20px 40px;
+  width: 100%;
+  padding: 10px 40px 20px 40px;
   display: flex;
+  justify-content: center;
 }
 .form-input {
   background-color: white;
@@ -182,7 +206,7 @@
   padding-left: 10px;
 }
 .form-submit {
-  background-color: skyblue;
+  background-color: orange;
   border: none;
   color: white;
   font-size: 10px;
@@ -191,9 +215,12 @@
   padding: 0 20px;
 }
 .book-show-comment-form {
+  width: 100%;
   display: flex;
 }
-
 .book-show-comment-area {
+  display: flex;
+  justify-content: center;
   width: 100%;
+  margin-bottom: 30px;
 }
