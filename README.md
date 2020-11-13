@@ -7,7 +7,7 @@
 - 読んだ本の写真や感想の投稿、それに対してのコメントの投稿
 
 ## URL
-
+- https://book-communication30472.herokuapp.com/
 ## テスト用アカウント
   
 
@@ -19,7 +19,7 @@
 - 読書が好きな子供と読書が好きでは無い親が、本をきっかけとしてコミュニケーションが取れる要素にしたい。
 
 ## 洗い出した要件
-https://docs.google.com/spreadsheets/d/1QNqEMtP_gxc4itBlkSxD0Petkh9GIGX_eke-WWHlqD8/edit#gid=282075926
+- https://docs.google.com/spreadsheets/d/1QNqEMtP_gxc4itBlkSxD0Petkh9GIGX_eke-WWHlqD8/edit#gid=282075926
 ## 実装した機能についての説明
 マイページ・マイページでの投稿一覧表示・book詳細ページ・book詳細ページでのコメント投稿機能
 ## 実装予定の機能
@@ -60,4 +60,8 @@ https://docs.google.com/spreadsheets/d/1QNqEMtP_gxc4itBlkSxD0Petkh9GIGX_eke-WWHl
 - belongs_to :books
 
 ## 開発環境
-
+- Ruby
+- Ruby on Rails
+- MySql
+- GitHub
+- Visual Studio Code
