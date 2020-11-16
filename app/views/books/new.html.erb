@@ -8,6 +8,7 @@
   本の感想を登録する
 </div>
 <div class="main-field">
+  <%= render 'error_messages', model: f.object %>
   <%= form_with model: @book, local: true do |f| %>
     <div class="form-style">
       <div class="book-form-space">
